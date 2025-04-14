@@ -8,34 +8,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     @keyframes clap {
-      0% { transform: rotate(0deg); }
-      50% { transform: rotate(-20deg); }
-      100% { transform: rotate(0deg); }
-    }
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
 
-    body {
-      background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
-      color: #eeeeee;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    h1.logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      text-align: center;
-      margin-top: 20px;
-      color: #ffffff;
-      position: relative;
-    }
-    h1.logo::before {
-      content: "🎬";
-      position: absolute;
-      left: -40px;
-      top: 0;
-      animation: clap 2s infinite ease-in-out;
-    }
+h1.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+  position: relative; /* ВАЖНО!!! */
+}
+
+h1.logo::before {
+  content: "🎬";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  animation: clap 2s infinite ease-in-out; /* Здесь сама анимация */
+}
     h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
