@@ -1,13 +1,217 @@
+<style>
+  @keyframes clap {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+  }
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clapperboard Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-<!-- Контент сайта будет вставлен сюда (пользовательский) -->
-</body>
-</html>
+  body {
+    background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
+    color: #eeeeee;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  h1.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    position: relative;
+  }
+  h1.logo::before {
+    content: "🎬";
+    position: absolute;
+    left: -40px;
+    top: 0;
+    animation: clap 2s infinite ease-in-out;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 60px;
+    color: #ffffff;
+  }
+  p, a {
+    font-size: 1.1rem;
+    color: #cccccc;
+    text-align: center;
+  }
+  a {
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+  button, a.button {
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  button:hover, a.button:hover {
+    background: #ffffff;
+    color: #0d0d0d;
+    transform: scale(1.05);
+  }
+  img {
+    filter: brightness(90%);
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+  .services-list div {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    transition: all 0.3s ease;
+  }
+  .services-list div:hover {
+    background: #222;
+    transform: translateY(-5px);
+  }
+  form input, form textarea {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #eeeeee;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
+  footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    color: #777777;
+  }
+</style>
+
+<h1 class="logo">Clapperboard Studio</h1>
+
+<section id="showreel">
+  <h2>Шоурил</h2>
+  <p>Шоурил предоставляется по запросу.</p>
+  <div>
+    <a href="#contacts" class="button">Запросить шоурил</a>
+  </div>
+</section>
+
+<section id="team">
+  <h2>Команда</h2>
+  <img src="/mnt/data/IMG_4685.WEBP" alt="Софья Косажевская и Татьяна Родимова">
+  <p>Софья Косажевская и Татьяна Родимова. Творческий тандем Clapperboard Studio.</p>
+  <p>
+    Софья Косажевская — сценарист, режиссёр, разработка проектов.<br>
+    Татьяна Родимова — сценарист, развитие идей, структура.
+  </p>
+  <div>
+    <a href="/mnt/data/Резюме_Косажевская С.В..pdf" download class="button">Запросить резюме Софьи</a>
+    <a href="/mnt/data/Резюме_Родимова Т.Т..pdf" download class="button">Запросить резюме Татьяны</a>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Портфолио</h2>
+  <div class="services-list">
+    <div>
+      <strong>Просто случайность</strong><br>
+      Короткометражный фильм. Режиссёр: Софья Косажевская. Сценаристы: Софья Косажевская, Алёна Елистратова.<br>
+      <a href="https://vesti-ural.ru/2023/11/15/211397/" target="_blank">Смотреть в СМИ</a>
+    </div>
+    <div>
+      <strong>Последняя</strong><br>
+      Короткометражный фильм. Режиссёр: Софья Косажевская. Сценарист: Татьяна Родимова.<br>
+      <a href="https://momenty.org/city/27027" target="_blank">Смотреть в СМИ</a>
+    </div>
+    <div>
+      <strong>Скромный поминальный обед</strong><br>
+      Короткометражный фильм (препродакшн). Сценаристы: Софья Косажевская, Татьяна Родимова.<br>
+      <a href="http://www.zmkf.ru/festivals/2024/news/itogi_odinnadtsatogo_zabaykal_skogo_mezhdunarodnogo_kinofestivalya.html" target="_blank">Смотреть в СМИ</a>
+    </div>
+  </div>
+</section>
+
+<section id="backstage">
+  <h2>Бэкстейдж</h2>
+  <div class="gallery">
+    <img src="/mnt/data/2024-11-02 08-06-54 704094.jpeg" alt="Бэкстейдж 1">
+    <img src="/mnt/data/2024-11-02 08-06-56 137289.jpeg" alt="Бэкстейдж 2">
+    <img src="/mnt/data/2024-11-02 08-09-23 641165.jpeg" alt="Бэкстейдж 3">
+    <img src="/mnt/data/2024-11-02 08-11-03 456752.jpeg" alt="Бэкстейдж 4">
+    <img src="/mnt/data/2024-11-03 15-01-05 039818.jpeg" alt="Бэкстейдж 5">
+    <img src="/mnt/data/2024-11-03 15-03-52 855399.jpeg" alt="Бэкстейдж 6">
+    <img src="/mnt/data/2024-11-03 15-04-04 412476.jpeg" alt="Бэкстейдж 7">
+    <img src="/mnt/data/2024-11-03 15-09-51 881198.jpeg" alt="Бэкстейдж 8">
+    <img src="/mnt/data/2024-11-03 15-12-22 394793.jpeg" alt="Бэкстейдж 9">
+    <img src="/mnt/data/3V9A7204.jpg" alt="Бэкстейдж 10">
+    <img src="/mnt/data/5P4A4904.jpg" alt="Бэкстейдж 11">
+    <img src="/mnt/data/5P4A4957-2.jpg" alt="Бэкстейдж 12">
+    <img src="/mnt/data/5P4A5059-2.jpg" alt="Бэкстейдж 13">
+    <img src="/mnt/data/5P4A5101-2.jpg" alt="Бэкстейдж 14">
+    <img src="/mnt/data/IMG_9987.WEBP" alt="Бэкстейдж 15">
+  </div>
+</section>
+
+<section id="courses">
+  <h2>Курсы</h2>
+  <p>Ведутся работы. Следите за обновлениями!</p>
+</section>
+
+<section id="pricing">
+  <h2>Стоимость работы</h2>
+  <div class="services-list">
+    <div><strong>Идея, логлайн, синопсис</strong> — от 10 000 ₽</div>
+    <div><strong>Сценарий короткометражного фильма (до 15 мин.)</strong> — от 40 000 ₽</div>
+    <div><strong>Сценарий короткометражного фильма (15–30 мин.)</strong> — от 60 000 ₽</div>
+    <div><strong>Сценарий рекламы или музыкального клипа (до 3 мин.)</strong> — от 15 000 ₽</div>
+    <div><strong>Скрипт-докторинг и редактура</strong> — от 20 ₽ за слово</div>
+    <div><strong>Консультация по сценарию</strong> — 4 500 ₽ / 1 час</div>
+    <div>Крупные проекты: стоимость рассчитывается индивидуально.</div>
+  </div>
+</section>
+
+<section id="contacts">
+  <h2>Контакты</h2>
+  <p>Есть идея? Поговорим.</p>
+  <form action="https://formspree.io/f/xnnprpzr" method="POST">
+    <input type="text" name="name" placeholder="Имя" required>
+    <input type="email" name="email" placeholder="E-mail" required>
+    <textarea name="message" placeholder="Сообщение" required></textarea>
+    <button type="submit">Отправить заявку</button>
+  </form>
+  <div>
+    <p>Или напрямую:</p>
+    <p>
+      <a href="mailto:sofix2882@gmail.com">Почта</a> | 
+      <a href="https://t.me/kosovlfel" target="_blank">Telegram</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Clapperboard Studio. Все права защищены.
+</footer>
